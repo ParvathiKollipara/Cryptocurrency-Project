@@ -1,0 +1,110 @@
+{% extends 'SProvider/Header.html' %}
+{% block researchblock %}
+
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+
+		<style>
+			body {background-color:#000000;}
+			.container-fluid {padding:50px;}
+			.container{background-color:white;padding:50px;   }
+			#title{font-family: 'Fredoka One', cursive;
+}
+			.text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+			.tweettext{
+
+    border: 2px solid yellowgreen;
+    width: 1104px;
+    height: 442px;
+    overflow: scroll;
+    background-color:;
+}
+		.style1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+        </style>
+
+	<body>
+	<div class="container-fluid">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-5">
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+							<p align="center" class="text-uppercase pull-center style1">View Crypto Currency Market Financial Risk Type </p>
+                            <hr>
+                            <div class="tweettext">
+                               <table border="5" align="center" bordercolor="#FF00FF">
+                               <tr>
+                                   <td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">volume_usd_24h</span></div></td>
+<td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">available_supply</span></div></td>
+<td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">idn</span></div></td>
+<td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">last_updated</span></div></td>
+<td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">market_cap_usd</span></div></td>
+<td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">max_supply</span></div></td>
+<td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">name</span></div></td>
+<td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">percent_change_1h</span></div></td>
+<td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">percent_change_24h</span></div></td>
+<td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">percent_change_7d</span></div></td>
+<td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">price_btc</span></div></td>
+<td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">price_usd</span></div></td>
+<td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">rank</span></div></td>
+<td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">symbol</span></div></td>
+<td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">total_supply</span></div></td>
+<td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">Prediction</span></div></td>
+
+                      </tr>
+                            {% for object in list_objects %}
+                      <tr>
+
+                          <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.volume_usd_24h}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.available_supply}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.idn}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.last_updated}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.market_cap_usd}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.max_supply}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.name}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.percent_change_1h}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.percent_change_24h}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.percent_change_7d}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.price_btc}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.price_usd}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.rank}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.symbol}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.total_supply}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.Prediction}}</td>
+
+                        </tr>
+
+                                        {% endfor %}
+                      </table>
+
+                            </div>
+
+
+
+
+						</fieldset>
+					</form>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    <tr>
